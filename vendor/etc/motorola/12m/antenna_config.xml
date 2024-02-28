@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+    <SETTINGS cameraid="1">
+        <COMMAND>
+            <TITLE>LTE 20M B41 2496MHz ANT1 26dBm</TITLE>
+            <START>LTE_B41_2496_Tx_On_ANT1</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>LTE 20M B41 2592MHz ANT1 26dBm</TITLE>
+            <START>LTE_B41_2592_Tx_On_ANT1</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>LTE 20M B41 2640MHz ANT1 26dBm</TITLE>
+            <START>LTE_B41_2640_Tx_On_ANT1</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N41 2496MHz ANT1 26dBm</TITLE>
+            <START>NR_N41_2496_Tx_On_ANT1</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N41 2593MHz ANT1 26dBm</TITLE>
+            <START>NR_N41_2593_Tx_On_ANT1</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N41 2690MHz ANT1 26dBm</TITLE>
+            <START>NR_N41_2690_Tx_On_ANT1</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N77 3300MHz ANT2 23dBm</TITLE>
+            <START>NR_N77_3300_Tx_On_ANT2</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N77 3750MHz ANT2 23dBm</TITLE>
+            <START>NR_N77_3750_Tx_On_ANT2</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N77 4200MHz ANT2 23dBm</TITLE>
+            <START>NR_N77_4200_Tx_On_ANT2</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N78 3300MHz ANT2 26dBm</TITLE>
+            <START>NR_N78_3300_Tx_On_ANT2</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N78 3550MHz ANT2 26dBm</TITLE>
+            <START>NR_N78_3550_Tx_On_ANT2</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N78 3800MHz ANT2 26dBm</TITLE>
+            <START>NR_N78_3800_Tx_On_ANT2</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N77 3300MHz ANT5 26dBm</TITLE>
+            <START>NR_N77_3300_Tx_On_ANT5</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N77 3750MHz ANT5 26dBm</TITLE>
+            <START>NR_N77_3750_Tx_On_ANT5</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N77 4200MHz ANT5 26dBm</TITLE>
+            <START>NR_N77_4200_Tx_On_ANT5</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N78 3300MHz ANT5 26dBm</TITLE>
+            <START>NR_N78_3300_Tx_On_ANT5</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N78 3550MHz ANT5 26dBm</TITLE>
+            <START>NR_N78_3550_Tx_On_ANT5</START>
+        </COMMAND>
+        <COMMAND>
+            <TITLE>NR 100M N78 3800MHz ANT5 26dBm</TITLE>
+            <START>NR_N78_3800_Tx_On_ANT5</START>
+        </COMMAND>
+    </SETTINGS>
+</CONFIG>
