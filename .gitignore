@@ -1,0 +1,14 @@
+bootRE/boot.elf
+product/priv-app/Velvet/Velvet.apk
+product/priv-app/Messages/Messages.apk
+product/priv-app/MotCamera4/MotCamera4.apk
+product/priv-app/MotoDesktop/MotoDesktop.apk
+product/priv-app/GmsCore/GmsCore.apk
+product/priv-app/AiServices/AiServices.apk
+product/app/Photos/Photos.apk
+product/app/WebViewGoogle/WebViewGoogle.apk
+product/app/Gmail2/Gmail2.apk
+recovery.img
+system_ext/apex/com.android.vndk.v30.apex
+vendor/etc/camera/vidhance.lic
+vendor/lib64/libQnnGpu.so

@@ -1,0 +1,14 @@
+# user 14 U1SQ34.52-21-1 3734b release-keys
+- manufacturer: motorola
+- platform: taro
+- codename: eqs
+- flavor: user
+- release: 14
+- id: U1SQ34.52-21-1
+- incremental: 3734b
+- tags: release-keys
+- fingerprint: motorola/eqs/eqs:12/U1SQ34.52-21-1/3734b:user/release-keys
+- is_ab: true
+- brand: motorola
+- branch: user-14-U1SQ34.52-21-1-3734b-release-keys
+- repo: motorola_eqs_dump
