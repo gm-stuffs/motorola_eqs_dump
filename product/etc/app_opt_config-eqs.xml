@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    App optimizations device config
+-->
+<app-optimization version="1">
+
+    <devconfig>
+        <thermal-sensor>fuse_temp</thermal-sensor>
+        <!-- cpu profiles from low to high
+        MAX_FREQ_CLUSTER_LITTLE_CORE_0 = 0x40804100,
+        MIN_FREQ_CLUSTER_LITTLE_CORE_0 = 0x40800100,
+        MAX_FREQ_CLUSTER_BIG_CORE_0 = 0x40804000,
+        MIN_FREQ_CLUSTER_BIG_CORE_0 = 0x40800000,
+        MAX_FREQ_CLUSTER_PRIME_CORE_0 = 0x40804200,
+        MIN_FREQ_CLUSTER_PRIME_CORE_0 = 0x40800200,
+        GPU_MIN_PWRLVL = 0x42804000,
+        SCHEDBOOST = 0x40C00000
+        POWER COLLAPSE = 0x40400000,
+        STORAGE CLK SCALING = 0x42C10000
+        MIN_ONLINE_CPU_CLUSTER_BIG = 0x41000000
+        MIN_ONLINE_CPU_CLUSTER_PRIME = 0x41000200
+        -->
+        <profile name="0">0x40804100, 1440, 0x40804000, 2112, 0x40804200, 1401</profile>
+        <profile name="1">0x40C00000, 0x1, 0x40400000, 0x1, 0x42C10000, 0x1</profile>
+        <profile name="fullscreen_video">0x40804100, 1440, 0x40804000, 1651, 0x40804200, 1036</profile>
+    </devconfig>
+
+    <!-- classified apps -->
+    <optimization name="base_app">
+        <supported-modes>video_mode, video_fullscreen_mode, camera_mode</supported-modes>
+        <maxe-profile>normal</maxe-profile>
+    </optimization>
+
+    <optimization name="rr_opt_app" parent="base_app">
+        <default-rr>auto</default-rr>
+    </optimization>
+
+    <optimization name="rr_limit_app" parent="rr_opt_app">
+        <limit rr="90"/>
+    </optimization>
+
+    <optimization name="navigation_app" parent="rr_opt_app">
+        <idle-fps>30</idle-fps>
+        <limit profile="0"/>
+    </optimization>
+
+    <optimization name="reading_app" parent="rr_opt_app">
+        <idle-fps>30</idle-fps>
+        <limit profile="0"/>
+    </optimization>
+
+    <optimization name="rr_deep_opt_app" parent="rr_opt_app">
+        <min-fps>30</min-fps>
+    </optimization>
+
+    <optimization name="low_latency_app" parent="base_app">
+        <llm>true</llm>
+    </optimization>
+
+    <optimization name="normal_app" parent="base_app">
+    </optimization>
+
+    <optimization name="heavy_load_app">
+        <boost rr="165" profile="1"/>
+        <thermal>perf</thermal>
+    </optimization>
+
+    <optimization name="heavy_load_lite_app">
+        <thermal>perf</thermal>
+    </optimization>
+
+    <!-- recognized in-app modes, will merge with app opt at runtime -->
+    <optimization name="video_mode">
+        <default-rr>auto</default-rr>
+    </optimization>
+
+    <optimization name="video_fullscreen_mode">
+        <default-rr>video</default-rr>
+        <limit profile="fullscreen_video"/>
+    </optimization>
+
+    <optimization name="camera_mode">
+        <default-rr remove-tag="true"/>
+        <max-profile remove-tag="true"/>
+        <thermal>camera</thermal>
+    </optimization>
+
+    <!-- global modes -->
+    <optimization name="fast_charging_mode">
+        <thermal>fastc</thermal>
+    </optimization>
+
+    <!-- optimizations -->
+    <optimization name="com.tencent.map" refs="navigation_app" />
+    <optimization name="com.baidu.BaiduMap" refs="navigation_app" />
+    <optimization name="com.autonavi.minimap" refs="navigation_app" />
+    <optimization name="com.google.android.apps.maps" refs="navigation_app" />
+    <optimization name="com.ss.android.ugc.aweme" refs="rr_deep_opt_app" />
+    <optimization name="com.zhiliaoapp.musically" refs="rr_deep_opt_app" />
+    <optimization name="com.tencent.mm" refs="low_latency_app" />
+    <optimization name="com.microsoft.teams" refs="low_latency_app" />
+    <optimization name="com.ss.android.article.news" refs="reading_app" />
+    <optimization name="com.netease.newsreader.activity" refs="reading_app" />
+    <optimization name="com.sohu.newsclient" refs="reading_app" />
+    <optimization name="com.sina.weibo" refs="reading_app" />
+    <optimization name="com.kmxs.reader" refs="reading_app" />
+    <optimization name="com.reddit.frontpage" refs="reading_app" />
+    <optimization name="us.zoom.videomeetings" refs="low_latency_app" />
+
+</app-optimization>
